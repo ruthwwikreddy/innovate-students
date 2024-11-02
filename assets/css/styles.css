@@ -1,0 +1,1744 @@
+/* Global Styles */
+:root {
+  --primary-color: #D4AF37; /* Rich gold */
+  --secondary-color: #1C1C1C; /* Deep charcoal */
+  --text-color: #F0F0F0; /* Off-white */
+  --background-color: #0A0A0A; /* Near-black */
+  --accent-color: #8A2BE2; /* Deep purple */
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Montserrat', 'Arial', sans-serif;
+  line-height: 1.8;
+  color: var(--text-color);
+  background-color: var(--background-color);
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 30px;
+}
+
+/* Header Styles */
+.futuristic-header {
+    background-color: rgba(28, 28, 28, 0.8); /* Semi-transparent background */
+    backdrop-filter: blur(10px); /* Blur effect for the background */
+    transition: all 0.3s ease; /* Smooth transition for changes */
+    position: fixed; /* Fixed position to stay at the top */
+    width: 100%; /* Full width */
+    z-index: 1000; /* Ensure it stays above other content */
+    padding: 20px 30px; /* Initial padding */
+}
+
+.futuristic-header.shrink {
+    padding: 0; /* Remove padding when shrunk */
+    height: 60px; /* Fixed height for the logo area */
+    border-radius: 30px; /* Curved edges */
+    background-color: rgba(28, 28, 28, 1); /* Solid background when shrunk */
+    display: flex; /* Flexbox for alignment */
+    justify-content: center; /* Center the logo */
+    align-items: center; /* Center vertically */
+}
+
+.logo {
+    transition: transform 0.3s ease; /* Smooth transition for logo size */
+    position: relative; /* Position relative for hover effect */
+}
+
+.logo img {
+    transition: transform 0.3s ease; /* Smooth transition for logo size */
+}
+
+.logo:hover img {
+    transform: scale(1.2); /* Enlarge logo on hover */
+}
+
+/* Hide navigation when shrunk */
+.futuristic-header.shrink .main-nav {
+    display: none; /* Hide navigation */
+}
+
+/* Show navigation when logo is hovered */
+.logo:hover + .main-nav {
+    display: flex; /* Show navigation */
+    opacity: 1; /* Make it visible */
+    pointer-events: auto; /* Enable pointer events */
+    transition: opacity 0.3s ease; /* Smooth transition for visibility */
+}
+
+/* Adjust main-nav to be hidden by default */
+.main-nav {
+    display: none; /* Hide navigation by default */
+    /* Add any additional styles for the navigation here */
+}
+
+.main-nav.active {
+    display: flex; /* Show navigation when active */
+}
+
+/* Navigation Styles */
+.main-nav {
+    display: flex; /* Flexbox for navigation */
+    align-items: center; /* Center align items */
+    transition: opacity 0.3s ease; /* Smooth transition for visibility */
+}
+
+.main-nav ul {
+    display: flex; /* Flexbox for menu items */
+    list-style: none; /* Remove default list styling */
+}
+
+.main-nav li {
+    margin-left: 20px; /* Space between menu items */
+}
+
+.main-nav a {
+    color: var(--text-color); /* Text color */
+    text-decoration: none; /* Remove underline */
+    transition: color 0.3s ease; /* Smooth transition for color */
+}
+
+.main-nav a:hover {
+    color: var(--primary-color); /* Change color on hover */
+}
+
+/* Menu toggle button */
+.menu-toggle {
+    display: none; /* Hide by default */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: block; /* Show toggle button on mobile */
+        background: none; /* No background */
+        border: none; /* No border */
+        color: var(--text-color); /* Text color */
+        font-size: 24px; /* Font size */
+        cursor: pointer; /* Pointer cursor */
+    }
+}
+
+header {
+  background-color: rgba(28, 28, 28, 0.95);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 4px 30px rgba(212, 175, 55, 0.15);
+  position: fixed;
+  width: 100%;
+  z-index: 1000;
+  transition: all 0.3s ease-in-out;
+}
+
+header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo img {
+  height: 50px;
+  width: auto;
+  /* Remove the filter property */
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  align-items: center;
+}
+
+nav ul li {
+  margin: 0 20px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: var(--primary-color);
+  font-weight: 600;
+  transition: color 0.3s ease;
+  font-size: 1.1rem;
+  letter-spacing: 1px;
+  position: relative;
+}
+
+nav ul li a::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 1px;
+  bottom: -5px;
+  left: 0;
+  background-color: var(--accent-color);
+  transition: width 0.3s ease;
+}
+
+nav ul li a:hover::after {
+  width: 100%;
+}
+
+/* Button Styles */
+.cta-button, .project-link, .blog-link, .register-button, 
+.filter-btn, .blog-filter-btn {
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  transition: all 0.3s ease;
+  background: var(--primary-color);
+  color: var(--text-color);
+  padding: 12px 24px;
+  font-size: 1rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: bold;
+  display: inline-block;
+  border: none;
+}
+
+/* Black hover effect for general buttons */
+.cta-button:hover, .project-link:hover, .blog-link:hover, .register-button:hover,
+.filter-btn:hover, .blog-filter-btn:hover {
+  background: var(--secondary-color);
+  color: var(--text-color);
+}
+
+/* Special styles for Read More and Learn More buttons */
+.read-more, .project-link.learn-more {
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  transition: all 0.3s ease;
+  background: transparent;
+  border: 2px solid var(--primary-color);
+  color: var(--text-color);
+  padding: 8px 16px;
+  font-size: 0.9rem;
+  letter-spacing: 1px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: bold;
+  display: inline-block;
+}
+
+.read-more::before, .project-link.learn-more::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(45deg, var(--primary-color), var(--accent-color));
+  z-index: -1;
+  transition: transform 0.6s cubic-bezier(0.65, 0, 0.35, 1);
+  transform: scaleX(0);
+  transform-origin: right;
+}
+
+.read-more:hover::before, .project-link.learn-more:hover::before {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+.read-more:hover, .project-link.learn-more:hover {
+  color: var(--secondary-color);
+  border-color: transparent;
+}
+
+/* Glowing effect on hover for Read More and Learn More */
+.read-more::after, .project-link.learn-more::after {
+  content: '';
+  position: absolute;
+  top: -2px; right: -2px; bottom: -2px; left: -2px;
+  background: linear-gradient(45deg, var(--primary-color), var(--accent-color));
+  filter: blur(10px);
+  opacity: 0;
+  z-index: -2;
+  transition: opacity 0.3s ease;
+}
+
+.read-more:hover::after, .project-link.learn-more:hover::after {
+  opacity: 1;
+}
+
+/* Pulsating animation for main CTA buttons */
+@keyframes pulse {
+  0% { box-shadow: 0 0 0 0 rgba(0, 119, 190, 0.4); }
+  70% { box-shadow: 0 0 0 10px rgba(0, 119, 190, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(0, 119, 190, 0); }
+}
+
+.cta-button {
+  animation: pulse 2s infinite;
+}
+
+/* Adjust main content padding to account for fixed header */
+main {
+  padding-top: 80px; /* Adjust this value based on your header height */
+}
+
+/* Hero Section */
+.hero {
+  position: relative;
+  overflow: hidden;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url('../img/hero-background.jpg');
+  background-size: cover;
+  background-position: center;
+  filter: blur(5px) brightness(0.3);
+  z-index: -1;
+}
+
+#projects-hero::before,
+#blog-hero::before {
+  background-image: url('../img/hero-background.jpg');
+}
+
+.hero .container {
+  position: relative;
+  z-index: 1;
+}
+
+.hero h1 {
+  font-size: 4rem;
+  margin-bottom: 20px;
+  color: var(--primary-color);
+  text-shadow: 0 0 10px rgba(255, 215, 0, 0.5);
+}
+
+.hero .tagline {
+  font-size: 1.5rem;
+  margin-bottom: 30px;
+  color: var(--text-color);
+}
+
+/* Section Styles */
+section {
+  padding: 100px 0;
+}
+
+section h2 {
+  font-size: 3.5rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 60px;
+  text-align: center;
+  color: var(--primary-color);
+  position: relative;
+  font-family: 'Playfair Display', serif;
+  text-shadow: 0 0 10px rgba(255, 215, 0, 0.3), 0 0 20px rgba(255, 215, 0, 0.2), 0 0 30px rgba(255, 215, 0, 0.1);
+  animation: glow 2s ease-in-out infinite alternate;
+}
+
+section h2::after {
+  content: '';
+  display: block;
+  width: 100px;
+  height: 2px;
+  background: linear-gradient(90deg, var(--primary-color), var(--accent-color));
+  margin: 20px auto 0;
+  box-shadow: 0 0 10px rgba(255, 215, 0, 0.5);
+}
+
+/* Features Section */
+.feature-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 40px;
+  margin-top: 60px;
+}
+
+.feature-item {
+  background: linear-gradient(135deg, rgba(28, 28, 28, 0.8), rgba(10, 10, 10, 0.8));
+  border: 1px solid rgba(212, 175, 55, 0.3);
+  box-shadow: 0 15px 40px rgba(212, 175, 55, 0.1);
+  text-align: center;
+  padding: 40px 30px;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+}
+
+.feature-item:hover {
+  transform: translateY(-15px) scale(1.03);
+  box-shadow: 0 25px 50px rgba(212, 175, 55, 0.2);
+}
+
+.feature-item i {
+  font-size: 3.5rem;
+  color: var(--primary-color);
+  margin-bottom: 25px;
+}
+
+.feature-item h3 {
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+  color: var(--primary-color);
+}
+
+/* Blog Section */
+.blog-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 40px;
+  margin-top: 60px;
+  margin-bottom: 40px; /* Increase this value to add more space below the grid */
+}
+
+.blog-post {
+  background: linear-gradient(135deg, rgba(28, 28, 28, 0.8), rgba(10, 10, 10, 0.8));
+  border: 1px solid rgba(212, 175, 55, 0.3);
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.blog-post:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+}
+
+.blog-post img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.blog-post:hover img {
+  transform: scale(1.1);
+}
+
+.blog-post-content {
+  padding: 30px;
+}
+
+.blog-post h3 {
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+  color: var(--primary-color);
+}
+
+.blog-post p {
+  margin-bottom: 20px;
+}
+
+.read-more {
+  color: #007bff;
+  text-decoration: underline;
+}
+
+/* Projects Section */
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 40px;
+  margin-top: 60px;
+  margin-bottom: 40px; /* Increase this value to add more space below the grid */
+}
+
+.project-item {
+  background: linear-gradient(135deg, rgba(28, 28, 28, 0.8), rgba(10, 10, 10, 0.8));
+  border: 1px solid rgba(212, 175, 55, 0.3);
+  text-align: center;
+  padding: 40px 30px;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.project-item:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+}
+
+.project-item img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.project-content {
+  padding: 20px;
+}
+
+.project-content h3 {
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+  color: var(--primary-color);
+}
+
+.project-content p {
+  margin-bottom: 20px;
+}
+
+.project-link {
+  display: inline-block;
+  background: linear-gradient(45deg, var(--primary-color), var(--accent-color));
+  border: none;
+  padding: 12px 24px;
+  font-size: 1rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: var(--secondary-color);
+  border-radius: 30px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  font-weight: bold;
+  margin-top: 30px; /* Increase this value to move the button lower */
+}
+
+.project-link:hover {
+  background-color: var(--accent-color);
+  color: var(--white);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+}
+
+/* Events Section */
+.events-list {
+  margin-top: 60px;
+}
+
+.event-item {
+  display: flex;
+  background-color: rgba(255, 255, 255, 0.05);
+  border: 1px solid var(--primary-color);
+  border-radius: 10px;
+  overflow: hidden;
+  margin-bottom: 30px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.event-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+}
+
+.event-date {
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+  padding: 20px;
+  text-align: center;
+  min-width: 120px;
+  font-weight: bold;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.event-date .day {
+  font-size: 2.5rem;
+  line-height: 1;
+}
+
+.event-date .month {
+  font-size: 1.2rem;
+  text-transform: uppercase;
+}
+
+.event-details {
+  padding: 30px;
+  flex-grow: 1;
+}
+
+.event-details h3 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  color: var(--primary-color);
+}
+
+.register-button {
+  display: inline-block;
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+  padding: 10px 20px;
+  border-radius: 30px;
+  text-decoration: none;
+  margin-top: 15px;
+  transition: all 0.3s ease;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.register-button:hover {
+  background-color: var(--accent-color);
+  color: var(--secondary-color);
+}
+
+/* Contact Section */
+#contact {
+  background-color: var(--secondary-color);
+  color: var(--white);
+  text-align: center;
+}
+
+.contact-form {
+  max-width: 600px;
+  margin: 60px auto 0;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 15px;
+  margin-bottom: 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  background-color: rgba(240, 240, 240, 0.05);
+  border: 1px solid rgba(212, 175, 55, 0.3);
+  color: var(--white);
+  transition: all 0.3s ease;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  background-color: rgba(240, 240, 240, 0.1);
+  border-color: var(--primary-color);
+  box-shadow: 0 0 15px rgba(212, 175, 55, 0.2);
+  outline: none;
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.contact-form button {
+  background: linear-gradient(45deg, var(--primary-color), var(--accent-color));
+  border: none;
+  padding: 15px 30px;
+  font-size: 1.1rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: var(--secondary-color);
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border-radius: 30px;
+}
+
+.contact-form button:hover {
+  background-color: var(--accent-color);
+  color: var(--white);
+}
+
+/* Footer Styles */
+footer {
+  background-color: var(--secondary-color);
+  color: var(--white);
+  padding: 80px 0 30px;
+  border-top: 1px solid var(--primary-color);
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.footer-logo img {
+  height: 60px;
+}
+
+.footer-links, .footer-social {
+  margin-top: 30px;
+}
+
+.footer-links h4, .footer-social h4 {
+  color: var(--primary-color);
+  margin-bottom: 20px;
+  font-size: 1.2rem;
+}
+
+.footer-links ul, .footer-social ul {
+  list-style: none;
+}
+
+.footer-links ul li, .footer-social ul li {
+  margin-bottom: 15px;
+}
+
+.footer-links a, .footer-social a {
+  color: var(--white);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-links a:hover, .footer-social a:hover {
+  color: var(--primary-color);
+}
+
+.footer-social ul {
+  display: flex;
+}
+
+.footer-social ul li {
+  margin-right: 20px;
+}
+
+.footer-bottom {
+  margin-top: 60px;
+  text-align: center;
+  color: var(--primary-color);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  header .container {
+    flex-direction: column;
+    padding: 15px;
+  }
+
+  .logo {
+    margin-bottom: 15px;
+  }
+
+  nav ul {
+    flex-direction: column;
+  }
+
+  nav ul li {
+    margin: 10px 0;
+  }
+
+  .hero h1 {
+    font-size: 3rem;
+  }
+
+  .hero .tagline {
+    font-size: 1.4rem;
+  }
+
+  section h2 {
+    font-size: 2.5rem;
+  }
+
+  .footer-content {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer-logo, .footer-links, .footer-social {
+    margin-bottom: 20px;
+  }
+
+  /* Adjust main content padding for mobile */
+  main {
+    padding-top: 120px; /* Increase this value for mobile to account for stacked header elements */
+  }
+}
+
+/* Projects Page Styles */
+#projects.hero {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('projects-hero-bg.jpg');
+  background-size: cover;
+  background-position: center;
+  height: 50vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: var(--white);
+}
+
+#projects.hero h1 {
+  font-size: 3.5rem;
+  margin-bottom: 20px;
+}
+
+.projects-filter {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 40px;
+  flex-wrap: wrap;
+}
+
+.filter-btn {
+  background-color: var(--secondary-color);
+  color: var(--white);
+  border: none;
+  padding: 10px 20px;
+  margin: 5px 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 1rem;
+  border-radius: 5px;
+}
+
+.filter-btn.active, .filter-btn:hover {
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+}
+
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+}
+
+.project-item {
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.project-item img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.project-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(34, 34, 34, 0.9);
+  color: var(--white);
+  padding: 20px;
+  transform: translateY(100%);
+  transition: transform 0.3s ease;
+}
+
+.project-item:hover img {
+  transform: scale(1.1);
+}
+
+.project-item:hover .project-overlay {
+  transform: translateY(0);
+}
+
+.project-overlay h3 {
+  font-size: 1.3rem;
+  margin-bottom: 10px;
+  color: var(--primary-color);
+}
+
+.project-link {
+  display: inline-block;
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+  padding: 8px 16px;
+  border-radius: 20px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+.project-link:hover {
+  background-color: #c19b00;
+}
+
+#menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+#menu-toggle span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    background-color: var(--white);
+    transition: all 0.3s ease-in-out;
+}
+
+@media (max-width: 768px) {
+    #menu-toggle {
+        display: block;
+    }
+
+    #main-menu {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background-color: rgba(0, 0, 0, 0.9);
+        padding: 20px;
+    }
+
+    #main-menu.active {
+        display: flex;
+    }
+
+    #menu-toggle.active span:nth-child(2) {
+        opacity: 0;
+    }
+
+    #menu-toggle.active span:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    #menu-toggle.active span:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+}
+
+/* Futuristic Elements */
+.feature-item, .blog-post, .project-item, .event-item {
+  position: relative;
+  overflow: hidden;
+}
+
+.feature-item::before, .blog-post::before, .project-item::before, .event-item::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(
+    to bottom right,
+    rgba(212, 175, 55, 0.15) 0%,
+    rgba(138, 43, 226, 0.1) 50%,
+    transparent 50%,
+    transparent 100%
+  );
+  transform: rotate(-45deg);
+  z-index: -1;
+}
+
+/* Add subtle animations */
+@keyframes pulse {
+  0% { box-shadow: 0 0 0 0 rgba(212, 175, 55, 0.4); }
+  70% { box-shadow: 0 0 0 10px rgba(212, 175, 55, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(212, 175, 55, 0); }
+}
+
+.cta-button, .project-link, .register-button {
+  animation: pulse 2s infinite;
+}
+
+/* Adjust positioning for project and blog buttons */
+.project-link, .blog-link {
+  display: inline-block;
+  background: linear-gradient(45deg, var(--primary-color), var(--accent-color));
+  border: none;
+  padding: 12px 24px;
+  font-size: 1rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: var(--secondary-color);
+  border-radius: 30px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  font-weight: bold;
+  margin-top: 30px; /* Increase this value to move the button lower */
+}
+
+.project-link:hover, .blog-link:hover {
+  background-color: var(--accent-color);
+  color: var(--white);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+}
+
+/* Add more space below the project/blog grid */
+.project-grid, .blog-grid {
+  margin-bottom: 40px; /* Increase this value to add more space below the grid */
+}
+
+/* Blog Filter Styles */
+.blog-filter {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 40px;
+    flex-wrap: wrap;
+}
+
+.blog-filter-btn {
+    background-color: var(--secondary-color);
+    color: var(--white);
+    border: none;
+    padding: 10px 20px;
+    margin: 5px 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 1rem;
+    border-radius: 5px;
+}
+
+.blog-filter-btn.active, .blog-filter-btn:hover {
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+}
+
+/* Innovative Enhancements */
+
+/* Glowing effect for headings */
+section h2 {
+  text-shadow: 0 0 10px rgba(255, 215, 0, 0.3), 0 0 20px rgba(255, 215, 0, 0.2), 0 0 30px rgba(255, 215, 0, 0.1);
+  animation: glow 2s ease-in-out infinite alternate;
+}
+
+@keyframes glow {
+  from {
+    text-shadow: 0 0 10px rgba(255, 215, 0, 0.3), 0 0 20px rgba(255, 215, 0, 0.2), 0 0 30px rgba(255, 215, 0, 0.1);
+  }
+  to {
+    text-shadow: 0 0 20px rgba(255, 215, 0, 0.4), 0 0 30px rgba(255, 215, 0, 0.3), 0 0 40px rgba(255, 215, 0, 0.2);
+  }
+}
+
+/* Neon border effect for feature items, blog posts, and project items */
+.feature-item, .blog-post, .project-item {
+  border: 2px solid transparent;
+  /* Add other existing styles here */
+}
+
+.feature-item::after, .blog-post::after, .project-item::after {
+  content: '';
+  position: absolute;
+  top: -2px; right: -2px; bottom: -2px; left: -2px;
+  background: linear-gradient(45deg, var(--primary-color), var(--accent-color));
+  z-index: -1;
+  filter: blur(10px);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.feature-item:hover::after, .blog-post:hover::after, .project-item:hover::after {
+  opacity: 1;
+}
+
+/* Futuristic button styles with arrow effect for all buttons */
+.cta-button, .project-link, .blog-link, .register-button, 
+.filter-btn, .blog-filter-btn, .read-more, .project-link {
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  transition: all 0.3s ease;
+}
+
+.cta-button::before, .project-link::before, .blog-link::before, .register-button::before,
+.filter-btn::before, .blog-filter-btn::before, .read-more::before, .project-link::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(
+    to bottom right,
+    rgba(212, 175, 55, 0.3) 0%,
+    rgba(138, 43, 226, 0.3) 50%,
+    transparent 50%,
+    transparent 100%
+  );
+  transform: rotate(-45deg);
+  z-index: -1;
+  transition: all 0.6s ease;
+}
+
+.cta-button:hover::before, .project-link:hover::before, .blog-link:hover::before, .register-button:hover::before,
+.filter-btn:hover::before, .blog-filter-btn:hover::before, .read-more:hover::before, .project-link:hover::before {
+  transform: rotate(-45deg) translate(10%, 10%);
+}
+
+.cta-button:hover, .project-link:hover, .blog-link:hover, .register-button:hover,
+.filter-btn:hover, .blog-filter-btn:hover, .read-more:hover, .project-link:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Enhance the button text for better contrast */
+.cta-button, .project-link, .blog-link, .register-button,
+.filter-btn, .blog-filter-btn, .read-more, .project-link {
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+}
+
+/* Adjust specific button styles if needed */
+.filter-btn, .blog-filter-btn {
+  padding: 5px 10px;
+  background-color: #f0f0f0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+/* Animated background for the hero section */
+.hero::before {
+  content: ""; /* Add this line */
+  animation: heroBackground 20s ease-in-out infinite alternate;
+}
+
+@keyframes heroBackground {
+  0% {
+    transform: scale(1) rotate(0deg);
+  }
+  100% {
+    transform: scale(1.1) rotate(3deg);
+  }
+}
+
+/* Futuristic scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--secondary-color);
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(var(--primary-color), var(--accent-color));
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(var(--accent-color), var(--primary-color));
+}
+
+/* Innovative and Creative Button Styles */
+.cta-button, .project-link, .blog-link, .register-button, 
+.filter-btn, .blog-filter-btn, .read-more {
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  transition: all 0.3s ease;
+  background: transparent;
+  border: 2px solid var(--primary-color);
+  color: var(--primary-color);
+  padding: 12px 24px;
+  font-size: 1rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: bold;
+  display: inline-block;
+}
+
+.cta-button::before, .project-link::before, .blog-link::before, .register-button::before,
+.filter-btn::before, .blog-filter-btn::before, .read-more::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(45deg, var(--primary-color), var(--accent-color));
+  z-index: -1;
+  transition: transform 0.6s cubic-bezier(0.65, 0, 0.35, 1);
+  transform: scaleX(0);
+  transform-origin: right;
+}
+
+.cta-button:hover::before, .project-link:hover::before, .blog-link:hover::before, .register-button:hover::before,
+.filter-btn:hover::before, .blog-filter-btn:hover::before, .read-more:hover::before {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+.cta-button:hover, .project-link:hover, .blog-link:hover, .register-button:hover,
+.filter-btn:hover, .blog-filter-btn:hover, .read-more:hover {
+  color: var(--secondary-color);
+  border-color: transparent;
+}
+
+/* Glowing effect on hover */
+.cta-button::after, .project-link::after, .blog-link::after, .register-button::after,
+.filter-btn::after, .blog-filter-btn::after, .read-more::after {
+  content: '';
+  position: absolute;
+  top: -2px; right: -2px; bottom: -2px; left: -2px;
+  background: linear-gradient(45deg, var(--primary-color), var(--accent-color));
+  filter: blur(10px);
+  opacity: 0;
+  z-index: -2;
+  transition: opacity 0.3s ease;
+}
+
+.cta-button:hover::after, .project-link:hover::after, .blog-link:hover::after, .register-button:hover::after,
+.filter-btn:hover::after, .blog-filter-btn:hover::after, .read-more:hover::after {
+  opacity: 1;
+}
+
+/* Pulsating animation */
+@keyframes pulse {
+  0% { box-shadow: 0 0 0 0 rgba(212, 175, 55, 0.4); }
+  70% { box-shadow: 0 0 0 10px rgba(212, 175, 55, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(212, 175, 55, 0); }
+}
+
+.cta-button, .project-link, .blog-link, .register-button {
+  animation: pulse 2s infinite;
+}
+
+/* Adjust specific button styles */
+.filter-btn, .blog-filter-btn {
+  padding: 8px 16px;
+  font-size: 0.9rem;
+}
+
+.read-more {
+  padding: 8px 16px;
+  font-size: 0.9rem;
+  text-transform: none;
+}
+
+/* Contact Form Styles */
+#customForm {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 30px;
+  background: linear-gradient(135deg, rgba(28, 28, 28, 0.8), rgba(10, 10, 10, 0.8));
+  border: 1px solid rgba(212, 175, 55, 0.3);
+  border-radius: 15px;
+  box-shadow: 0 15px 40px rgba(212, 175, 55, 0.1);
+}
+
+#customForm label {
+  display: block;
+  margin-bottom: 10px;
+  color: var(--primary-color);
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+#customForm input[type="text"],
+#customForm input[type="email"],
+#customForm textarea {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 20px;
+  background-color: rgba(240, 240, 240, 0.05);
+  border: 1px solid rgba(212, 175, 55, 0.3);
+  border-radius: 5px;
+  color: var(--text-color);
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+#customForm input[type="text"]:focus,
+#customForm input[type="email"]:focus,
+#customForm textarea:focus {
+  background-color: rgba(240, 240, 240, 0.1);
+  border-color: var(--primary-color);
+  box-shadow: 0 0 15px rgba(212, 175, 55, 0.2);
+  outline: none;
+}
+
+#customForm input::placeholder,
+#customForm textarea::placeholder {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+#customForm button[type="submit"] {
+  display: block;
+  width: 100%;
+  padding: 12px;
+  background: linear-gradient(45deg, var(--primary-color), var(--accent-color));
+  border: none;
+  border-radius: 30px;
+  color: var(--secondary-color);
+  font-size: 1.1rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+#customForm button[type="submit"]::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transition: all 0.5s ease;
+}
+
+#customForm button[type="submit"]:hover::before {
+  left: 100%;
+}
+
+#customForm button[type="submit"]:hover {
+  box-shadow: 0 0 20px rgba(212, 175, 55, 0.5);
+  transform: translateY(-2px);
+}
+
+/* Glowing effect for form elements */
+@keyframes formGlow {
+  0% { box-shadow: 0 0 5px rgba(212, 175, 55, 0.3); }
+  50% { box-shadow: 0 0 20px rgba(212, 175, 55, 0.5); }
+  100% { box-shadow: 0 0 5px rgba(212, 175, 55, 0.3); }
+}
+
+#customForm input:focus,
+#customForm textarea:focus {
+  animation: formGlow 1.5s infinite;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  #customForm {
+    padding: 20px;
+  }
+}
+
+/* Custom Event Proposal Form Styles */
+#event-proposals {
+    padding: 60px 0; /* Add padding for spacing */
+    background-color: rgba(28, 28, 28, 0.8); /* Background color to match the theme */
+    color: var(--text-color); /* Text color */
+}
+
+#event-proposals h2 {
+    font-size: 2.5rem; /* Heading size */
+    margin-bottom: 20px; /* Space below heading */
+    color: var(--primary-color); /* Primary color for headings */
+    text-align: center; /* Center align heading */
+}
+
+#event-proposals p {
+    font-size: 1.1rem; /* Paragraph font size */
+    margin-bottom: 40px; /* Space below paragraph */
+    text-align: center; /* Center align paragraph */
+}
+
+#event-proposals form {
+    max-width: 600px; /* Limit form width */
+    margin: 0 auto; /* Center the form */
+    background: rgba(240, 240, 240, 0.1); /* Light background for the form */
+    border: 1px solid rgba(212, 175, 55, 0.3); /* Border color */
+    border-radius: 10px; /* Rounded corners */
+    padding: 30px; /* Padding inside the form */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); /* Shadow for depth */
+}
+
+#event-proposals label {
+    display: block; /* Block display for labels */
+    margin-bottom: 10px; /* Space below labels */
+    color: var(--primary-color); /* Label color */
+    font-weight: bold; /* Bold labels */
+}
+
+#event-proposals input[type="text"],
+#event-proposals input[type="email"],
+#event-proposals input[type="tel"],
+#event-proposals textarea {
+    width: 100%; /* Full width inputs */
+    padding: 12px; /* Padding inside inputs */
+    margin-bottom: 20px; /* Space below inputs */
+    background-color: rgba(240, 240, 240, 0.05); /* Input background */
+    border: 1px solid rgba(212, 175, 55, 0.3); /* Input border */
+    border-radius: 5px; /* Rounded corners */
+    color: var(--text-color); /* Input text color */
+    font-size: 1rem; /* Input font size */
+    transition: all 0.3s ease; /* Transition for focus effect */
+}
+
+#event-proposals input:focus,
+#event-proposals textarea:focus {
+    background-color: rgba(240, 240, 240, 0.1); /* Focus background */
+    border-color: var(--primary-color); /* Focus border color */
+    box-shadow: 0 0 15px rgba(212, 175, 55, 0.2); /* Focus shadow */
+    outline: none; /* Remove outline */
+}
+
+#event-proposals button[type="submit"] {
+    display: block; /* Block display for button */
+    width: 100%; /* Full width button */
+    padding: 12px; /* Padding inside button */
+    background: linear-gradient(45deg, var(--primary-color), var(--accent-color)); /* Gradient background */
+    border: none; /* No border */
+    border-radius: 30px; /* Rounded corners */
+    color: var(--secondary-color); /* Button text color */
+    font-size: 1.1rem; /* Button font size */
+    font-weight: bold; /* Bold button text */
+    text-transform: uppercase; /* Uppercase text */
+    cursor: pointer; /* Pointer cursor */
+    transition: all 0.3s ease; /* Transition for hover effect */
+}
+
+#event-proposals button[type="submit"]:hover {
+    background-color: var(--accent-color); /* Change background on hover */
+    color: var(--white); /* Change text color on hover */
+}
+
+/* Host an Event Form Styles */
+#host-an-event {
+    padding: 60px 0; /* Add padding for spacing */
+    background-color: rgba(28, 28, 28, 0.8); /* Background color to match the theme */
+    color: var(--text-color); /* Text color */
+}
+
+#host-an-event h2 {
+    font-size: 2.5rem; /* Heading size */
+    margin-bottom: 20px; /* Space below heading */
+    color: var(--primary-color); /* Primary color for headings */
+    text-align: center; /* Center align heading */
+}
+
+#host-an-event p {
+    font-size: 1.1rem; /* Paragraph font size */
+    margin-bottom: 40px; /* Space below paragraph */
+    text-align: center; /* Center align paragraph */
+}
+
+#host-an-event form {
+    max-width: 600px; /* Limit form width */
+    margin: 0 auto; /* Center the form */
+    background: rgba(240, 240, 240, 0.1); /* Light background for the form */
+    border: 1px solid rgba(212, 175, 55, 0.3); /* Border color */
+    border-radius: 10px; /* Rounded corners */
+    padding: 30px; /* Padding inside the form */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); /* Shadow for depth */
+}
+
+#host-an-event label {
+    display: block; /* Block display for labels */
+    margin-bottom: 10px; /* Space below labels */
+    color: var(--primary-color); /* Label color */
+    font-weight: bold; /* Bold labels */
+}
+
+#host-an-event input[type="text"],
+#host-an-event input[type="email"],
+#host-an-event input[type="tel"],
+#host-an-event textarea {
+    width: 100%; /* Full width inputs */
+    padding: 12px; /* Padding inside inputs */
+    margin-bottom: 20px; /* Space below inputs */
+    background-color: rgba(240, 240, 240, 0.05); /* Input background */
+    border: 1px solid rgba(212, 175, 55, 0.3); /* Input border */
+    border-radius: 5px; /* Rounded corners */
+    color: var(--text-color); /* Input text color */
+    font-size: 1rem; /* Input font size */
+    transition: all 0.3s ease; /* Transition for focus effect */
+}
+
+#host-an-event input:focus,
+#host-an-event textarea:focus {
+    background-color: rgba(240, 240, 240, 0.1); /* Focus background */
+    border-color: var(--primary-color); /* Focus border color */
+    box-shadow: 0 0 15px rgba(212, 175, 55, 0.2); /* Focus shadow */
+    outline: none; /* Remove outline */
+}
+
+#host-an-event button[type="submit"] {
+    display: block; /* Block display for button */
+    width: 100%; /* Full width button */
+    padding: 12px; /* Padding inside button */
+    background: linear-gradient(45deg, var(--primary-color), var(--accent-color)); /* Gradient background */
+    border: none; /* No border */
+    border-radius: 30px; /* Rounded corners */
+    color: var(--secondary-color); /* Button text color */
+    font-size: 1.1rem; /* Button font size */
+    font-weight: bold; /* Bold button text */
+    text-transform: uppercase; /* Uppercase text */
+    cursor: pointer; /* Pointer cursor */
+    transition: all 0.3s ease; /* Transition for hover effect */
+}
+
+#host-an-event button[type="submit"]:hover {
+    background-color: var(--accent-color); /* Change background on hover */
+    color: var(--white); /* Change text color on hover */
+}
+
+/* Competitions List Styles */
+.competitions-list {
+    padding: 60px 0; /* Add padding for spacing */
+    background-color: rgba(28, 28, 28, 0.8); /* Background color to match the theme */
+    color: var(--text-color); /* Text color */
+}
+
+.competitions-list h2 {
+    font-size: 2.5rem; /* Heading size */
+    margin-bottom: 20px; /* Space below heading */
+    color: var(--primary-color); /* Primary color for headings */
+    text-align: center; /* Center align heading */
+}
+
+.competitions-list ul {
+    list-style: none; /* Remove default list styling */
+    padding: 0; /* Remove padding */
+    display: flex; /* Flexbox for layout */
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center align items */
+}
+
+.competitions-list li {
+    background-color: rgba(28, 28, 28, 0.8); /* Background color for each competition */
+    border: 1px solid rgba(212, 175, 55, 0.3); /* Border color */
+    border-radius: 10px; /* Rounded corners */
+    overflow: hidden; /* Hide overflow */
+    margin-bottom: 30px; /* Space between items */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); /* Shadow for depth */
+    transition: all 0.3s ease; /* Transition for hover effect */
+    padding: 20px; /* Padding inside each item */
+    width: 80%; /* Set a width for the items */
+    position: relative; /* Position for pseudo-elements */
+}
+
+.competitions-list li:hover {
+    transform: translateY(-5px); /* Lift effect on hover */
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2); /* Shadow effect on hover */
+}
+
+.competitions-list h3 {
+    font-size: 1.8rem; /* Competition title size */
+    margin-bottom: 10px; /* Space below title */
+    color: var(--primary-color); /* Title color */
+}
+
+.competitions-list p {
+    margin-bottom: 15px; /* Space below description */
+    color: var(--text-color); /* Description text color */
+}
+
+/* Register Button Styles */
+.register-button {
+    display: inline-block;
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    padding: 10px 20px;
+    border-radius: 30px;
+    text-decoration: none;
+    margin-top: 15px;
+    transition: all 0.3s ease;
+    font-size: 0.9rem;
+}
+
+.register-button:hover {
+    background-color: var(--accent-color); /* Change background on hover */
+    color: var(--white); /* Change text color on hover */
+}
+
+/* Additional Effects for Competitions */
+.competitions-list li::before {
+    content: '';
+    position: absolute;
+    top: -2px; right: -2px; bottom: -2px; left: -2px;
+    background: linear-gradient(45deg, var(--primary-color), var(--accent-color));
+    z-index: -1;
+    filter: blur(10px);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.competitions-list li:hover::before {
+    opacity: 1; /* Show background effect on hover */
+}
+
+/* Adjust header width when scrolled */
+.futuristic-header.scrolled {
+    width: auto; /* Adjust width to logo width */
+}
+
+/* Cohort Section Styles */
+.cohort-section {
+    padding: 60px 0; /* Padding for the section */
+    background-color: rgba(28, 28, 28, 0.9); /* Background color */
+    color: var(--text-color); /* Text color */
+    text-align: center; /* Center align text */
+}
+
+/* Grid for Benefits */
+.benefits-grid {
+    display: grid; /* Use grid layout */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive columns */
+    gap: 40px; /* Space between items */
+    margin-top: 60px; /* Space above the grid */
+}
+
+/* Individual Benefit Item */
+.benefit-item {
+    background: linear-gradient(135deg, rgba(28, 28, 28, 0.8), rgba(10, 10, 10, 0.8)); /* Background gradient */
+    border: 1px solid rgba(212, 175, 55, 0.3); /* Border styling */
+    box-shadow: 0 15px 40px rgba(212, 175, 55, 0.1); /* Shadow for depth */
+    text-align: center; /* Center align text */
+    padding: 40px 30px; /* Padding inside the item */
+    border-radius: 10px; /* Rounded corners */
+    transition: all 0.3s ease; /* Smooth transition for hover effects */
+}
+
+.benefit-item:hover {
+    transform: translateY(-15px) scale(1.03); /* Hover effect */
+    box-shadow: 0 25px 50px rgba(212, 175, 55, 0.2); /* Enhanced shadow on hover */
+}
+
+.benefit-item i {
+    font-size: 3.5rem; /* Icon size */
+    color: var(--primary-color); /* Icon color */
+    margin-bottom: 25px; /* Space below icon */
+}
+
+.benefit-item h3 {
+    font-size: 1.5rem; /* Heading size */
+    margin-bottom: 15px; /* Space below heading */
+    color: var(--primary-color); /* Heading color */
+}
+
+/* Cohort Application Form Styles */
+#cohort-application {
+    max-width: 600px; /* Limit form width */
+    margin: 0 auto; /* Center the form */
+    padding: 30px; /* Padding inside the form */
+    background: linear-gradient(135deg, rgba(28, 28, 28, 0.8), rgba(10, 10, 10, 0.8)); /* Background gradient */
+    border: 1px solid rgba(212, 175, 55, 0.3); /* Border color */
+    border-radius: 15px; /* Rounded corners */
+    box-shadow: 0 15px 40px rgba(212, 175, 55, 0.1); /* Shadow for depth */
+}
+
+#cohort-application label {
+    display: block; /* Block display for labels */
+    margin-bottom: 10px; /* Space below labels */
+    color: var(--primary-color); /* Label color */
+    font-weight: bold; /* Bold labels */
+    text-transform: uppercase; /* Uppercase text */
+    letter-spacing: 1px; /* Letter spacing */
+}
+
+#cohort-application input[type="text"],
+#cohort-application input[type="email"],
+#cohort-application textarea {
+    width: 100%; /* Full width inputs */
+    padding: 12px; /* Padding inside inputs */
+    margin-bottom: 20px; /* Space below inputs */
+    background-color: rgba(240, 240, 240, 0.05); /* Input background */
+    border: 1px solid rgba(212, 175, 55, 0.3); /* Input border */
+    border-radius: 5px; /* Rounded corners */
+    color: var(--text-color); /* Input text color */
+    font-size: 1rem; /* Input font size */
+    transition: all 0.3s ease; /* Transition for focus effect */
+}
+
+#cohort-application input[type="text"]:focus,
+#cohort-application input[type="email"]:focus,
+#cohort-application textarea:focus {
+    background-color: rgba(240, 240, 240, 0.1); /* Focus background */
+    border-color: var(--primary-color); /* Focus border color */
+    box-shadow: 0 0 15px rgba(212, 175, 55, 0.2); /* Focus shadow */
+    outline: none; /* Remove outline */
+}
+
+#cohort-application input::placeholder,
+#cohort-application textarea::placeholder {
+    color: rgba(255, 255, 255, 0.5); /* Placeholder color */
+}
+
+#cohort-application button[type="submit"] {
+    display: block; /* Block display for button */
+    width: 100%; /* Full width button */
+    padding: 12px; /* Padding inside button */
+    background: linear-gradient(45deg, var(--primary-color), var(--accent-color)); /* Gradient background */
+    border: none; /* No border */
+    border-radius: 30px; /* Rounded corners */
+    color: var(--secondary-color); /* Button text color */
+    font-size: 1.1rem; /* Button font size */
+    font-weight: bold; /* Bold button text */
+    text-transform: uppercase; /* Uppercase text */
+    letter-spacing: 1px; /* Letter spacing */
+    cursor: pointer; /* Pointer cursor */
+    transition: all 0.3s ease; /* Transition for hover effect */
+    position: relative; /* Position for hover effect */
+    overflow: hidden; /* Hide overflow for hover effect */
+}
+
+#cohort-application button[type="submit"]::before {
+    content: ''; /* Before pseudo-element for hover effect */
+    position: absolute; /* Positioning */
+    top: 0; /* Align to top */
+    left: -100%; /* Start off-screen */
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent); /* Gradient background */
+    transition: all 0.5s ease; /* Transition for hover effect */
+}
+
+#cohort-application button[type="submit"]:hover::before {
+    left: 100%; /* Move to the right on hover */
+}
+
+#cohort-application button[type="submit"]:hover {
+    box-shadow: 0 0 20px rgba(212, 175, 55, 0.5); /* Shadow on hover */
+    transform: translateY(-2px); /* Lift effect on hover */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    #cohort-application {
+        padding: 20px; /* Adjust padding for smaller screens */
+    }
+}
+
+/* Testimonials Section Styles */
+.testimonials {
+    background-color: rgba(28, 28, 28, 0.8); /* Background color for testimonials */
+    padding: 40px 0; /* Padding for testimonials */
+    color: var(--text-color); /* Text color */
+    border-radius: 10px; /* Rounded corners */
+    margin-top: 40px; /* Space above testimonials */
+}
+
+.testimonial-item {
+    margin: 20px 0; /* Space between testimonial items */
+    font-style: italic; /* Italic style for testimonials */
+    padding: 10px; /* Padding for testimonial items */
+    border-left: 4px solid var(--primary-color); /* Left border for emphasis */
+}
+
+.testimonial-item cite {
+    display: block; /* Block display for citation */
+    margin-top: 10px; /* Space above citation */
+    font-weight: bold; /* Bold style for citation */
+    color: var(--accent-color); /* Accent color for citation */
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .cohort-section h1 {
+        font-size: 2rem; /* Adjust heading size for smaller screens */
+    }
+
+    .cohort-section h2 {
+        font-size: 1.5rem; /* Adjust subheading size for smaller screens */
+    }
+
+    .benefits-list li {
+        font-size: 1rem; /* Adjust list item font size for smaller screens */
+    }
+
+    #cohort-application button {
+        padding: 10px 20px; /* Adjust button padding for smaller screens */
+    }
+}

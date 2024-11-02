@@ -12,26 +12,23 @@
     <script src="https://kit.fontawesome.com/your-fontawesome-kit.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    <header>
+    <header class="futuristic-header">
         <div class="container">
             <a href="#" class="logo" aria-label="Innovate Students Home">
                 <img src="assets/img/logo.png" alt="Innovate Students Logo" width="200" height="60">
             </a>
-            <nav aria-label="Main Navigation">
+            <nav aria-label="Main Navigation" class="main-nav">
                 <ul id="main-menu">
                     <li><a href="#home">Home</a></li>
                     <li><a href="#features">Features</a></li>
                     <li><a href="#projects">Projects</a></li>
                     <li><a href="#blog">Blog</a></li>
                     <li><a href="#events">Events</a></li>
+                    <li><a href="pages/cohort.html" class="active">Cohort</a></li>
                     <li><a href="#contact" class="cta-button">Get Started</a></li>
                 </ul>
             </nav>
-            <button id="menu-toggle" aria-label="Toggle Menu">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
+            <button id="menu-toggle" aria-label="Toggle Menu" class="menu-toggle">+</button>
         </div>
     </header>
 
@@ -46,37 +43,47 @@
 
         <section id="features" aria-labelledby="features-heading">
             <div class="container">
-                <h2 id="features-heading">Transformative Features</h2>
+                <h2 id="features-heading" class="no-yellow">Transformative Features</h2>
                 <div class="feature-grid">
                     <div class="feature-item">
-                        <i class="fas fa-robot"></i>
-                        <h3>AI-Powered Learning</h3>
-                        <p>Experience personalized education tailored to your unique needs and goals.</p>
+                        <h3>Lead and Organize Events</h3>
+                        <p>Take charge and bring your ideas to life through impactful events and initiatives.</p>
                     </div>
                     <div class="feature-item">
-                        <i class="fas fa-globe-americas"></i>
-                        <h3>Global Collaboration</h3>
-                        <p>Connect with peers worldwide to share ideas and work on groundbreaking projects.</p>
+                        <h3>Collaborate with Amazing People</h3>
+                        <p>Work alongside talented peers from diverse backgrounds and cultures.</p>
                     </div>
                     <div class="feature-item">
-                        <i class="fas fa-vr-cardboard"></i>
-                        <h3>Immersive VR & AI Learning</h3>
-                        <p>Step into the future of education with cutting-edge virtual reality experiences.</p>
+                        <h3>Bring Innovative Ideas to Life</h3>
+                        <p>Turn your creative solutions into tangible projects that make a difference.</p>
                     </div>
                     <div class="feature-item">
-                        <i class="fas fa-project-diagram"></i>
-                        <h3>Real-World Impact Projects</h3>
-                        <p>Apply your skills to create solutions that make a difference in communities.</p>
+                        <h3>Develop Leadership and Teamwork Skills</h3>
+                        <p>Hone your ability to lead teams and work collaboratively on meaningful projects.</p>
                     </div>
                     <div class="feature-item">
-                        <i class="fas fa-trophy"></i>
-                        <h3>Gamified Learning Challenges</h3>
-                        <p>Earn recognition and rewards as you conquer exciting educational milestones.</p>
+                        <h3>Network with Mentorship</h3>
+                        <p>Gain insights and guidance from experienced mentors who help you grow professionally and personally.</p>
                     </div>
                     <div class="feature-item">
-                        <i class="fas fa-users"></i>
-                        <h3>Expert Mentor Network</h3>
-                        <p>Gain invaluable guidance from industry leaders on your innovation journey.</p>
+                        <h3>Enhance Your Resume</h3>
+                        <p>Boost your portfolio with real-world experiences that set you apart in the job market.</p>
+                    </div>
+                    <div class="feature-item">
+                        <h3>Develop Your Tech Skills</h3>
+                        <p>Strengthen your digital literacy and technical skills through hands-on learning and challenges.</p>
+                    </div>
+                    <div class="feature-item">
+                        <h3>Work on Global Impact Projects</h3>
+                        <p>Be a part of initiatives that address pressing global challenges like sustainability and social justice.</p>
+                    </div>
+                    <div class="feature-item">
+                        <h3>Improve Communication and Presentation Skills</h3>
+                        <p>Get the chance to present your ideas, pitch projects, and grow your confidence.</p>
+                    </div>
+                    <div class="feature-item">
+                        <h3>Join Competitions and Challenges</h3>
+                        <p>Compete in innovation challenges that push you to think critically and creatively.</p>
                     </div>
                 </div>
             </div>
@@ -84,21 +91,21 @@
 
         <section id="projects" class="grid-section" aria-labelledby="projects-heading">
             <div class="container">
-                <h2 id="projects-heading">Featured Projects</h2>
+                <h2 id="projects-heading" class="no-yellow">Featured Projects</h2>
                 <div class="project-grid">
                     <div class="project-item">
-                        <img src="assets/img/project-1.jpg" alt="Eco-friendly Innovation">
+                        <img src="assets/img/project-1.jpg" alt="EcoClean: Medical Waste Conversion Machine">
                         <div class="project-content">
-                            <h3>Eco-friendly Innovation Challenge</h3>
-                            <p>Students develop sustainable solutions for local environmental issues.</p>
-                            <a href="#" class="project-link">Learn More</a>
+                            <h3>EcoClean: Medical Waste Conversion Machine</h3>
+                            <p>A system designed to convert medical waste into safer byproducts using heat treatment and emission control technologies, featuring temperature monitoring, overheat protection, and ash collection mechanisms.</p>
+                            <a href="#" class="project-link learn-more">Learn More</a>
                         </div>
                     </div>
                     <div class="project-item">
-                        <img src="assets/img/project-2.jpg" alt="AI-Driven Education">
+                        <img src="assets/img/project-2.jpg" alt="FreshLife: Food Waste Reduction App">
                         <div class="project-content">
-                            <h3>AI-Driven Education Platform</h3>
-                            <p>Revolutionizing learning with personalized AI-powered educational tools.</p>
+                            <h3>FreshLife: Food Waste Reduction App</h3>
+                            <p>An app that helps households manage food inventory, track expiration dates, and suggest recipes to minimize food wastage, encouraging sustainable consumption and reducing overall food waste.</p>
                             <a href="#" class="project-link">Learn More</a>
                         </div>
                     </div>
@@ -111,24 +118,24 @@
 
         <section id="blog" class="grid-section" aria-labelledby="blog-heading">
             <div class="container">
-                <h2 id="blog-heading">Latest Insights</h2>
+                <h2 id="blog-heading" class="no-yellow">Latest Insights</h2>
                 <div class="blog-grid">
                     <div class="blog-post">
-                        <img src="assets/img/blog-1.jpg" alt="AI in Education">
+                        <img src="assets/img/blog-1.jpg" alt="AI in Healthcare">
                         <div class="blog-post-content">
-                            <div class="blog-post-meta">May 15, 2023</div>
-                            <h3>The Future of AI in Education</h3>
-                            <p>Exploring how artificial intelligence is revolutionizing the learning experience.</p>
-                            <a href="#" class="read-more">Read More</a>
+                            <div class="blog-post-meta">August 2024</div>
+                            <h3>AI in Healthcare</h3>
+                            <p>Transforming Patient Care and Medical Research</p>
+                            <a href="https://ruthwikredd.blogspot.com/2024/08/ai-in-healthcare-transforming-patient.html" class="read-more">Read More</a>
                         </div>
                     </div>
                     <div class="blog-post">
-                        <img src="assets/img/blog-2.jpg" alt="Global Collaboration">
+                        <img src="assets/img/blog-2.jpg" alt="Introduction to Machine Learning">
                         <div class="blog-post-content">
-                            <div class="blog-post-meta">May 22, 2023</div>
-                            <h3>Fostering Global Collaboration Among Students</h3>
-                            <p>How technology is breaking down barriers and connecting young innovators worldwide.</p>
-                            <a href="#" class="read-more">Read More</a>
+                            <div class="blog-post-meta">August 2024</div>
+                            <h3>Introduction to Machine Learning</h3>
+                            <p>A Beginner's Guide</p>
+                            <a href="https://ruthwikredd.blogspot.com/2024/08/introduction-to-machine-learning.html" class="read-more">Read More</a>
                         </div>
                     </div>
                 </div>
@@ -155,6 +162,32 @@
                     </div>
                     <!-- Add more event items here -->
                 </div>
+                <div class="center-button">
+                    <a href="Pages/events.html" class="cta-button">View All Events</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="competitions" aria-labelledby="competitions-heading">
+            <div class="container">
+                <h2 id="competitions-heading">Upcoming Competitions & Quizzes</h2>
+                <p>Stay tuned for exciting competitions and quizzes that challenge your skills and creativity!</p>
+                <ul class="competitions-list">
+                    <li>
+                        <h3>Innovation Challenge 2024</h3>
+                        <p>Join us for a chance to showcase your innovative ideas and win exciting prizes!</p>
+                        <a href="#" class="register-button">Register Now</a>
+                    </li>
+                    <li>
+                        <h3>Monthly Quiz Contest</h3>
+                        <p>Test your knowledge and compete with peers in our monthly quiz contest!</p>
+                        <a href="#" class="register-button">Join the Quiz</a>
+                    </li>
+                    <!-- Add more competition items here -->
+                </ul>
+                <div class="center-button">
+                    <a href="Pages/competitions.html" class="cta-button">View All Competitions</a>
+                </div>
             </div>
         </section>
 
@@ -162,12 +195,21 @@
             <div class="container">
                 <h2 id="contact-heading">Join the Innovation Movement</h2>
                 <p>Ready to embark on your transformative journey? Sign up now and be part of the future!</p>
-                <form action="#" method="POST" class="contact-form">
-                    <input type="text" id="name" name="name" placeholder="Your Name" required>
-                    <input type="email" id="email" name="email" placeholder="Your Email" required>
-                    <textarea id="message" name="message" placeholder="Your Message" required></textarea>
-                    <button type="submit" class="cta-button">Begin Your Journey</button>
+                <p>Please fill out the following information:</p>
+                
+                <form id="customForm" action="https://docs.google.com/forms/d/e/1FAIpQLSeVF6_CoHtNnmZK38lJcayLbQ95Nmge6eWUIW-dpsi--ohr6g/formResponse" method="POST">
+                    <label for="name">Your Name:</label>
+                    <input type="text" name="entry.199173665" id="name" required><br><br>
+
+                    <label for="email">Email:</label>
+                    <input type="email" name="entry.284878582" id="email" required><br><br>
+
+                    <label for="paragraph">Your interest in innovation:</label>
+                    <textarea name="entry.611880426" id="paragraph" required></textarea><br><br>
+
+                    <button type="submit" class="cta-button">Submit</button>
                 </form>
+                
             </div>
         </section>
     </main>
@@ -188,15 +230,7 @@
                         <li><a href="#events">Events</a></li>
                     </ul>
                 </nav>
-                <div class="footer-social">
-                    <h4>Connect With Us</h4>
-                    <ul>
-                        <li><a href="#" aria-label="Facebook"><i class="fab fa-facebook" aria-hidden="true"></i></a></li>
-                        <li><a href="#" aria-label="Twitter"><i class="fab fa-twitter" aria-hidden="true"></i></a></li>
-                        <li><a href="#" aria-label="Instagram"><i class="fab fa-instagram" aria-hidden="true"></i></a></li>
-                        <li><a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin" aria-hidden="true"></i></a></li>
-                    </ul>
-                </div>
+ 
             </div>
             <div class="footer-bottom">
                 <p>&copy; 2023 Innovate Students. Founded by Ruthwik Reddy. All rights reserved.</p>
