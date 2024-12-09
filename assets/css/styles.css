@@ -1387,317 +1387,77 @@ section h2 {
     text-transform: uppercase; /* Uppercase text */
     cursor: pointer; /* Pointer cursor */
     transition: all 0.3s ease; /* Transition for hover effect */
-}
-
-#event-proposals button[type="submit"]:hover {
-    background-color: var(--accent-color); /* Change background on hover */
-    color: var(--white); /* Change text color on hover */
-}
-
-/* Host an Event Form Styles */
-#host-an-event {
-    padding: 60px 0; /* Add padding for spacing */
-    background-color: rgba(28, 28, 28, 0.8); /* Background color to match the theme */
-    color: var(--text-color); /* Text color */
-}
-
-#host-an-event h2 {
-    font-size: 2.5rem; /* Heading size */
-    margin-bottom: 20px; /* Space below heading */
-    color: var(--primary-color); /* Primary color for headings */
-    text-align: center; /* Center align heading */
-}
-
-#host-an-event p {
-    font-size: 1.1rem; /* Paragraph font size */
-    margin-bottom: 40px; /* Space below paragraph */
-    text-align: center; /* Center align paragraph */
-}
-
-#host-an-event form {
-    max-width: 600px; /* Limit form width */
-    margin: 0 auto; /* Center the form */
-    background: rgba(240, 240, 240, 0.1); /* Light background for the form */
-    border: 1px solid rgba(212, 175, 55, 0.3); /* Border color */
-    border-radius: 10px; /* Rounded corners */
-    padding: 30px; /* Padding inside the form */
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); /* Shadow for depth */
-}
-
-#host-an-event label {
-    display: block; /* Block display for labels */
-    margin-bottom: 10px; /* Space below labels */
-    color: var(--primary-color); /* Label color */
-    font-weight: bold; /* Bold labels */
-}
-
-#host-an-event input[type="text"],
-#host-an-event input[type="email"],
-#host-an-event input[type="tel"],
-#host-an-event textarea {
-    width: 100%; /* Full width inputs */
-    padding: 12px; /* Padding inside inputs */
-    margin-bottom: 20px; /* Space below inputs */
-    background-color: rgba(240, 240, 240, 0.05); /* Input background */
-    border: 1px solid rgba(212, 175, 55, 0.3); /* Input border */
-    border-radius: 5px; /* Rounded corners */
-    color: var(--text-color); /* Input text color */
-    font-size: 1rem; /* Input font size */
-    transition: all 0.3s ease; /* Transition for focus effect */
-}
-
-#host-an-event input:focus,
-#host-an-event textarea:focus {
-    background-color: rgba(240, 240, 240, 0.1); /* Focus background */
-    border-color: var(--primary-color); /* Focus border color */
-    box-shadow: 0 0 15px rgba(212, 175, 55, 0.2); /* Focus shadow */
-    outline: none; /* Remove outline */
-}
-
-#host-an-event button[type="submit"] {
-    display: block; /* Block display for button */
-    width: 100%; /* Full width button */
-    padding: 12px; /* Padding inside button */
-    background: linear-gradient(45deg, var(--primary-color), var(--accent-color)); /* Gradient background */
-    border: none; /* No border */
-    border-radius: 30px; /* Rounded corners */
-    color: var(--secondary-color); /* Button text color */
-    font-size: 1.1rem; /* Button font size */
-    font-weight: bold; /* Bold button text */
-    text-transform: uppercase; /* Uppercase text */
-    cursor: pointer; /* Pointer cursor */
-    transition: all 0.3s ease; /* Transition for hover effect */
-}
-
-#host-an-event button[type="submit"]:hover {
-    background-color: var(--accent-color); /* Change background on hover */
-    color: var(--white); /* Change text color on hover */
-}
-
-/* Competitions List Styles */
-.competitions-list {
-    padding: 60px 0; /* Add padding for spacing */
-    background-color: rgba(28, 28, 28, 0.8); /* Background color to match the theme */
-    color: var(--text-color); /* Text color */
-}
-
-.competitions-list h2 {
-    font-size: 2.5rem; /* Heading size */
-    margin-bottom: 20px; /* Space below heading */
-    color: var(--primary-color); /* Primary color for headings */
-    text-align: center; /* Center align heading */
-}
-
-.competitions-list ul {
-    list-style: none; /* Remove default list styling */
-    padding: 0; /* Remove padding */
-    display: flex; /* Flexbox for layout */
-    flex-direction: column; /* Stack items vertically */
-    align-items: center; /* Center align items */
-}
-
-.competitions-list li {
-    background-color: rgba(28, 28, 28, 0.8); /* Background color for each competition */
-    border: 1px solid rgba(212, 175, 55, 0.3); /* Border color */
-    border-radius: 10px; /* Rounded corners */
-    overflow: hidden; /* Hide overflow */
-    margin-bottom: 30px; /* Space between items */
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1); /* Shadow for depth */
-    transition: all 0.3s ease; /* Transition for hover effect */
-    padding: 20px; /* Padding inside each item */
-    width: 80%; /* Set a width for the items */
-    position: relative; /* Position for pseudo-elements */
-}
-
-.competitions-list li:hover {
-    transform: translateY(-5px); /* Lift effect on hover */
-    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2); /* Shadow effect on hover */
-}
-
-.competitions-list h3 {
-    font-size: 1.8rem; /* Competition title size */
-    margin-bottom: 10px; /* Space below title */
-    color: var(--primary-color); /* Title color */
-}
-
-.competitions-list p {
-    margin-bottom: 15px; /* Space below description */
-    color: var(--text-color); /* Description text color */
-}
-
-/* Register Button Styles */
-.register-button {
-    display: inline-block;
-    background-color: var(--primary-color);
-    color: var(--secondary-color);
-    padding: 10px 20px;
-    border-radius: 30px;
-    text-decoration: none;
-    margin-top: 15px;
-    transition: all 0.3s ease;
-    font-size: 0.9rem;
-}
-
-.register-button:hover {
-    background-color: var(--accent-color); /* Change background on hover */
-    color: var(--white); /* Change text color on hover */
-}
-
-/* Additional Effects for Competitions */
-.competitions-list li::before {
-    content: '';
-    position: absolute;
-    top: -2px; right: -2px; bottom: -2px; left: -2px;
-    background: linear-gradient(45deg, var(--primary-color), var(--accent-color));
-    z-index: -1;
-    filter: blur(10px);
-    opacity: 0;
-    transition: opacity 0.3s ease;
-}
-
-.competitions-list li:hover::before {
-    opacity: 1; /* Show background effect on hover */
-}
-
-/* Adjust header width when scrolled */
-.futuristic-header.scrolled {
-    width: auto; /* Adjust width to logo width */
-}
-
-/* Cohort Section Styles */
-.cohort-section {
-    padding: 60px 0; /* Padding for the section */
-    background-color: rgba(28, 28, 28, 0.9); /* Background color */
-    color: var(--text-color); /* Text color */
-    text-align: center; /* Center align text */
-}
-
-/* Grid for Benefits */
-.benefits-grid {
-    display: grid; /* Use grid layout */
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive columns */
-    gap: 40px; /* Space between items */
-    margin-top: 60px; /* Space above the grid */
-}
-
-/* Individual Benefit Item */
-.benefit-item {
-    background: linear-gradient(135deg, rgba(28, 28, 28, 0.8), rgba(10, 10, 10, 0.8)); /* Background gradient */
-    border: 1px solid rgba(212, 175, 55, 0.3); /* Border styling */
-    box-shadow: 0 15px 40px rgba(212, 175, 55, 0.1); /* Shadow for depth */
-    text-align: center; /* Center align text */
-    padding: 40px 30px; /* Padding inside the item */
-    border-radius: 10px; /* Rounded corners */
-    transition: all 0.3s ease; /* Smooth transition for hover effects */
-}
-
-.benefit-item:hover {
-    transform: translateY(-15px) scale(1.03); /* Hover effect */
-    box-shadow: 0 25px 50px rgba(212, 175, 55, 0.2); /* Enhanced shadow on hover */
-}
-
-.benefit-item i {
-    font-size: 3.5rem; /* Icon size */
-    color: var(--primary-color); /* Icon color */
-    margin-bottom: 25px; /* Space below icon */
-}
-
-.benefit-item h3 {
-    font-size: 1.5rem; /* Heading size */
-    margin-bottom: 15px; /* Space below heading */
-    color: var(--primary-color); /* Heading color */
-}
-
-/* Cohort Application Form Styles */
-#cohort-application {
-    max-width: 600px; /* Limit form width */
-    margin: 0 auto; /* Center the form */
-    padding: 30px; /* Padding inside the form */
-    background: linear-gradient(135deg, rgba(28, 28, 28, 0.8), rgba(10, 10, 10, 0.8)); /* Background gradient */
-    border: 1px solid rgba(212, 175, 55, 0.3); /* Border color */
-    border-radius: 15px; /* Rounded corners */
-    box-shadow: 0 15px 40px rgba(212, 175, 55, 0.1); /* Shadow for depth */
-}
-
-#cohort-application label {
-    display: block; /* Block display for labels */
-    margin-bottom: 10px; /* Space below labels */
-    color: var(--primary-color); /* Label color */
-    font-weight: bold; /* Bold labels */
-    text-transform: uppercase; /* Uppercase text */
-    letter-spacing: 1px; /* Letter spacing */
-}
-
-#cohort-application input[type="text"],
-#cohort-application input[type="email"],
-#cohort-application textarea {
-    width: 100%; /* Full width inputs */
-    padding: 12px; /* Padding inside inputs */
-    margin-bottom: 20px; /* Space below inputs */
-    background-color: rgba(240, 240, 240, 0.05); /* Input background */
-    border: 1px solid rgba(212, 175, 55, 0.3); /* Input border */
-    border-radius: 5px; /* Rounded corners */
-    color: var(--text-color); /* Input text color */
-    font-size: 1rem; /* Input font size */
-    transition: all 0.3s ease; /* Transition for focus effect */
-}
-
-#cohort-application input[type="text"]:focus,
-#cohort-application input[type="email"]:focus,
-#cohort-application textarea:focus {
-    background-color: rgba(240, 240, 240, 0.1); /* Focus background */
-    border-color: var(--primary-color); /* Focus border color */
-    box-shadow: 0 0 15px rgba(212, 175, 55, 0.2); /* Focus shadow */
-    outline: none; /* Remove outline */
-}
-
-#cohort-application input::placeholder,
-#cohort-application textarea::placeholder {
-    color: rgba(255, 255, 255, 0.5); /* Placeholder color */
-}
-
-#cohort-application button[type="submit"] {
-    display: block; /* Block display for button */
-    width: 100%; /* Full width button */
-    padding: 12px; /* Padding inside button */
-    background: linear-gradient(45deg, var(--primary-color), var(--accent-color)); /* Gradient background */
-    border: none; /* No border */
-    border-radius: 30px; /* Rounded corners */
-    color: var(--secondary-color); /* Button text color */
-    font-size: 1.1rem; /* Button font size */
-    font-weight: bold; /* Bold button text */
-    text-transform: uppercase; /* Uppercase text */
-    letter-spacing: 1px; /* Letter spacing */
-    cursor: pointer; /* Pointer cursor */
-    transition: all 0.3s ease; /* Transition for hover effect */
     position: relative; /* Position for hover effect */
     overflow: hidden; /* Hide overflow for hover effect */
 }
 
-#cohort-application button[type="submit"]::before {
+#event-proposals button[type="submit"]::before {
     content: ''; /* Before pseudo-element for hover effect */
     position: absolute; /* Positioning */
     top: 0; /* Align to top */
     left: -100%; /* Start off-screen */
     width: 100%; /* Full width */
     height: 100%; /* Full height */
-    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent); /* Gradient background */
+    background: linear-gradient(90deg, 
+        transparent,
+        rgba(255, 255, 255, 0.2),
+        transparent); /* Gradient background */
     transition: all 0.5s ease; /* Transition for hover effect */
 }
 
-#cohort-application button[type="submit"]:hover::before {
-    left: 100%; /* Move to the right on hover */
+#event-proposals button[type="submit"]:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(212, 175, 55, 0.3);
 }
 
-#cohort-application button[type="submit"]:hover {
-    box-shadow: 0 0 20px rgba(212, 175, 55, 0.5); /* Shadow on hover */
-    transform: translateY(-2px); /* Lift effect on hover */
+#event-proposals button[type="submit"]:hover::before {
+    left: 100%;
+}
+
+#event-proposals .center-button {
+    text-align: center;
+    margin-top: 50px;
+}
+
+#event-proposals .center-button .cta-button {
+    font-size: 1.1rem;
+    padding: 15px 35px;
+    background: linear-gradient(45deg, var(--primary-color), var(--accent-color));
+    border: none;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
 }
 
 /* Responsive adjustments */
 @media (max-width: 768px) {
-    #cohort-application {
-        padding: 20px; /* Adjust padding for smaller screens */
+    #event-proposals {
+        padding: 60px 20px;
+    }
+
+    #event-proposals h2 {
+        font-size: 2.5rem;
+    }
+
+    #event-proposals .competitions-list li {
+        flex-direction: column;
+    }
+
+    #event-proposals .competition-date {
+        padding: 20px;
+        flex-direction: row;
+        justify-content: center;
+        gap: 10px;
+    }
+
+    #event-proposals .competition-date .day {
+        font-size: 2rem;
+    }
+
+    #event-proposals .competition-details {
+        padding: 20px;
+    }
+
+    #event-proposals .competition-details h3 {
+        font-size: 1.5rem;
     }
 }
 
@@ -1738,7 +1498,931 @@ section h2 {
         font-size: 1rem; /* Adjust list item font size for smaller screens */
     }
 
-    #cohort-application button {
+    #event-proposals button {
         padding: 10px 20px; /* Adjust button padding for smaller screens */
     }
+}
+/* Basic reset for body margins and padding */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+/* Centering the login container */
+.login-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh; /* Full viewport height */
+  background-color: #f4f4f4;
+}
+
+/* Styling the Google login button */
+#google-login-btn {
+  padding: 10px 20px;
+  font-size: 16px;
+  color: white;
+  background-color: #dd4b39; /* Google red color */
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+#google-login-btn:hover {
+  background-color: #c23321; /* Darker shade on hover */
+}
+
+.scroll-animate {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+}
+
+.scroll-animate.animate {
+  opacity: 1;
+  transform: translateY(0);
+} 
+
+.events-calendar .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.calendar-container {
+  width: 100%;
+  margin: 20px 0;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  width: 100%;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.events-list {
+  width: 100%;
+  margin: 20px 0;
+}
+
+.events-list ul {
+  list-style: none;
+  padding: 0;
+}
+
+.events-list li {
+  background: #fff;
+  margin-bottom: 10px;
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.view-all {
+  background-color: #007BFF;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.calendar-container {
+  position: relative;
+  padding: 20px;
+  max-width: 600px;
+  margin: auto;
+}
+
+.calendar-day {
+  display: inline-block;
+  width: 14.28%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  vertical-align: top;
+  height: 100px;
+  position: relative;
+}
+
+.calendar-day.event-day {
+  background-color: #f0f0f0;
+}
+
+.event-details {
+  position: absolute;
+  background: white;
+  border: 1px solid #ccc;
+  padding: 10px;
+  display: none;
+  z-index: 1000;
+}
+
+button {
+  margin: 5px;
+}
+
+.search-bar {
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.search-bar input {
+    width: 20%;
+    padding: 10px;
+    font-size: 16px;
+}
+
+.calendar-container {
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+/* ... existing code ... */
+
+/* Competitions Page Styles */
+.competitions-list {
+  padding: 80px 0;
+  margin: 0 auto;
+  max-width: 1200px;
+}
+
+.competitions-list h2 {
+  text-align: center;
+  margin-bottom: 50px;
+  color: var(--primary-color);
+  font-size: 2.5rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-shadow: 0 0 10px rgba(212, 175, 55, 0.3);
+}
+
+.competitions-list ul {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  padding: 0 20px;
+}
+
+.competitions-list .futuristic-box {
+  background: linear-gradient(135deg, rgba(28, 28, 28, 0.8), rgba(10, 10, 10, 0.8));
+  border: 1px solid rgba(212, 175, 55, 0.3);
+  border-radius: 15px;
+  padding: 30px;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  list-style: none;
+}
+
+.competitions-list .futuristic-box::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(
+      to bottom right,
+      rgba(212, 175, 55, 0.15) 0%,
+      rgba(138, 43, 226, 0.1) 50%,
+      transparent 50%,
+      transparent 100%
+  );
+  transform: rotate(-45deg);
+  z-index: 0;
+  transition: all 0.6s ease;
+}
+
+.competitions-list .futuristic-box:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 40px rgba(212, 175, 55, 0.2);
+}
+
+.competitions-list .futuristic-box:hover::before {
+  transform: rotate(-45deg) translate(10%, 10%);
+}
+
+.competitions-list h3 {
+  color: var(--primary-color);
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+  position: relative;
+  z-index: 1;
+}
+
+.competitions-list p {
+  color: var(--text-color);
+  margin-bottom: 25px;
+  position: relative;
+  z-index: 1;
+}
+
+.competitions-list .register-button {
+  display: inline-block;
+  background: linear-gradient(45deg, var(--primary-color), var(--accent-color));
+  color: var(--secondary-color);
+  padding: 12px 24px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 0.9rem;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+  position: relative;
+  z-index: 1;
+  border: none;
+}
+
+.competitions-list .register-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(212, 175, 55, 0.3);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .competitions-list {
+      padding: 60px 0;
+  }
+
+  .competitions-list h2 {
+      font-size: 2rem;
+  }
+
+  .competitions-list ul {
+      grid-template-columns: 1fr;
+      gap: 20px;
+  }
+
+  .competitions-list .futuristic-box {
+      padding: 20px;
+  }
+}
+
+/* ... existing code ... */
+
+/* Home Page Competitions Section Styles */
+#competitions {
+  padding: 80px 0;
+  background: linear-gradient(135deg, rgba(28, 28, 28, 0.9), rgba(10, 10, 10, 0.9));
+}
+
+#competitions .container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+#competitions h2 {
+  text-align: center;
+  margin-bottom: 30px;
+  color: var(--primary-color);
+  font-size: 2.5rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-shadow: 0 0 10px rgba(212, 175, 55, 0.3);
+}
+
+#competitions > p {
+  text-align: center;
+  color: var(--text-color);
+  margin-bottom: 50px;
+  font-size: 1.2rem;
+}
+
+#competitions .competitions-list {
+  padding: 0;
+}
+
+#competitions .competitions-list li {
+  background: linear-gradient(135deg, rgba(28, 28, 28, 0.8), rgba(10, 10, 10, 0.8));
+  border: 1px solid rgba(212, 175, 55, 0.3);
+  border-radius: 15px;
+  padding: 30px;
+  margin-bottom: 30px;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  list-style: none;
+}
+
+#competitions .competitions-list li::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(
+      to bottom right,
+      rgba(212, 175, 55, 0.15) 0%,
+      rgba(138, 43, 226, 0.1) 50%,
+      transparent 50%,
+      transparent 100%
+  );
+  transform: rotate(-45deg);
+  z-index: 0;
+  transition: all 0.6s ease;
+}
+
+#competitions .competitions-list li:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 40px rgba(212, 175, 55, 0.2);
+}
+
+#competitions .competitions-list li:hover::before {
+  transform: rotate(-45deg) translate(10%, 10%);
+}
+
+#competitions .competitions-list h3 {
+  color: var(--primary-color);
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+  position: relative;
+  z-index: 1;
+}
+
+#competitions .competitions-list p {
+  color: var(--text-color);
+  margin-bottom: 25px;
+  position: relative;
+  z-index: 1;
+}
+
+#competitions .register-button {
+  display: inline-block;
+  background: linear-gradient(45deg, var(--primary-color), var(--accent-color));
+  color: var(--secondary-color);
+  padding: 12px 24px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 0.9rem;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+  position: relative;
+  z-index: 1;
+  border: none;
+}
+
+#competitions .register-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(212, 175, 55, 0.3);
+}
+
+#competitions .center-button {
+  text-align: center;
+  margin-top: 40px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  #competitions {
+      padding: 60px 0;
+  }
+
+  #competitions h2 {
+      font-size: 2rem;
+  }
+
+  #competitions .competitions-list li {
+      padding: 20px;
+  }
+}
+
+/* Home Page Competitions Section Enhanced Styles */
+#competitions {
+  padding: 80px 0;
+  background: linear-gradient(135deg, rgba(28, 28, 28, 0.9), rgba(10, 10, 10, 0.9));
+  position: relative;
+  overflow: hidden;
+}
+
+#competitions::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(45deg, 
+      rgba(212, 175, 55, 0.05) 0%,
+      rgba(138, 43, 226, 0.05) 100%);
+  pointer-events: none;
+}
+
+#competitions .container {
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+
+#competitions h2#competitions-heading {
+  font-size: 3.5rem;
+  color: var(--primary-color);
+  text-align: center;
+  margin-bottom: 40px;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  text-shadow: 0 0 15px rgba(212, 175, 55, 0.3);
+  font-family: 'Playfair Display', serif;
+}
+
+#competitions > p {
+  text-align: center;
+  color: var(--text-color);
+  font-size: 1.3rem;
+  margin-bottom: 50px;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.6;
+}
+
+#competitions .competitions-list {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  padding: 0;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+#competitions .competitions-list li {
+  display: flex;
+  background: linear-gradient(135deg, 
+      rgba(28, 28, 28, 0.95), 
+      rgba(10, 10, 10, 0.95));
+  border: 1px solid rgba(212, 175, 55, 0.3);
+  border-radius: 15px;
+  overflow: hidden;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+}
+
+#competitions .competitions-list li::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(45deg,
+      rgba(212, 175, 55, 0.1),
+      rgba(138, 43, 226, 0.1));
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+#competitions .competitions-list li:hover {
+  transform: translateY(-5px) scale(1.02);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3),
+              0 0 20px rgba(212, 175, 55, 0.2);
+}
+
+#competitions .competitions-list li:hover::before {
+  opacity: 1;
+}
+
+#competitions .competition-date {
+  background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+  color: var(--secondary-color);
+  padding: 30px;
+  min-width: 120px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  text-align: center;
+}
+
+#competitions .competition-date .day {
+  font-size: 2.5rem;
+  line-height: 1;
+  margin-bottom: 5px;
+}
+
+#competitions .competition-date .month {
+  font-size: 1.2rem;
+  text-transform: uppercase;
+}
+
+#competitions .competition-details {
+  padding: 30px;
+  flex-grow: 1;
+}
+
+#competitions .competition-details h3 {
+  color: var(--primary-color);
+  font-size: 1.8rem;
+  margin-bottom: 15px;
+  font-family: 'Playfair Display', serif;
+  letter-spacing: 1px;
+}
+
+#competitions .competition-details p {
+  color: var(--text-color);
+  font-size: 1.1rem;
+  margin-bottom: 20px;
+  line-height: 1.6;
+  opacity: 0.9;
+}
+
+#competitions .register-button {
+  display: inline-block;
+  background: linear-gradient(45deg, var(--primary-color), var(--accent-color));
+  color: var(--secondary-color);
+  padding: 12px 28px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 0.95rem;
+  letter-spacing: 1.5px;
+  transition: all 0.3s ease;
+  border: none;
+  position: relative;
+  overflow: hidden;
+}
+
+#competitions .register-button::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, 
+      transparent,
+      rgba(255, 255, 255, 0.2),
+      transparent);
+  transition: left 0.7s ease;
+}
+
+#competitions .register-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(212, 175, 55, 0.3);
+}
+
+#competitions .register-button:hover::before {
+  left: 100%;
+}
+
+#competitions .center-button {
+  text-align: center;
+  margin-top: 50px;
+}
+
+#competitions .center-button .cta-button {
+  font-size: 1.1rem;
+  padding: 15px 35px;
+  background: linear-gradient(45deg, var(--primary-color), var(--accent-color));
+  border: none;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  #competitions {
+      padding: 60px 20px;
+  }
+
+  #competitions h2#competitions-heading {
+      font-size: 2.5rem;
+  }
+
+  #competitions .competitions-list li {
+      flex-direction: column;
+  }
+
+  #competitions .competition-date {
+      padding: 20px;
+      flex-direction: row;
+      justify-content: center;
+      gap: 10px;
+  }
+
+  #competitions .competition-date .day {
+      font-size: 2rem;
+  }
+
+  #competitions .competition-details {
+      padding: 20px;
+  }
+
+  #competitions .competition-details h3 {
+      font-size: 1.5rem;
+  }
+}
+
+.timeline-section {
+    padding: 4rem 0;
+    background: linear-gradient(135deg, rgba(28, 28, 28, 0.95), rgba(10, 10, 10, 0.95));
+    position: relative;
+    overflow: hidden;
+}
+
+.timeline-container {
+    position: relative;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.timeline-block {
+    position: relative;
+    margin: 2rem 0;
+    min-height: 150px;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 0.6s ease;
+}
+
+.timeline-block.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.timeline-line {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 2px;
+    height: 100%;
+    background: rgba(212, 175, 55, 0.3);
+    transform: translateX(-50%);
+}
+
+.timeline-inner {
+    width: 100%;
+    height: 0;
+    background: linear-gradient(to bottom, var(--primary-color), var(--accent-color));
+    transition: height 0.6s ease;
+    box-shadow: 0 0 10px rgba(212, 175, 55, 0.3);
+}
+
+.timeline-dot {
+    position: absolute;
+    left: 50%;
+    top: 0;
+    transform: translateX(-50%);
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background: var(--primary-color);
+    box-shadow: 0 0 15px rgba(212, 175, 55, 0.5);
+    z-index: 2;
+}
+
+.timeline-content {
+    position: relative;
+    width: calc(50% - 30px);
+    margin-left: calc(50% + 30px);
+    padding: 1.5rem;
+    background: linear-gradient(135deg, rgba(28, 28, 28, 0.8), rgba(10, 10, 10, 0.8));
+    border: 1px solid rgba(212, 175, 55, 0.3);
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+}
+
+.timeline-block:nth-child(even) .timeline-content {
+    margin-left: 0;
+    margin-right: calc(50% + 30px);
+}
+
+.timeline-content:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 40px rgba(212, 175, 55, 0.2);
+}
+
+.timeline-content h3 {
+    margin: 0 0 0.5rem;
+    color: var(--primary-color);
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.timeline-content p {
+    margin: 0;
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+.timeline-content ul {
+    margin: 0.5rem 0 0;
+    padding-left: 1.2rem;
+    list-style-type: none;
+}
+
+.timeline-content ul li {
+    position: relative;
+    margin: 0.5rem 0;
+    padding-left: 1.2rem;
+    color: var(--text-color);
+}
+
+.timeline-content ul li::before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: var(--primary-color);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .timeline-content {
+        width: calc(100% - 40px);
+        margin-left: 40px !important;
+    }
+
+    .timeline-line {
+        left: 20px;
+    }
+
+    .timeline-dot {
+        left: 20px;
+    }
+
+    .timeline-block:nth-child(even) .timeline-content {
+        margin-right: 0;
+    }
+
+    .timeline-content h3 {
+        font-size: 1.3rem;
+    }
+
+    .timeline-content p {
+        font-size: 0.95rem;
+    }
+}
+
+/* Timeline Section */
+.timeline-section {
+  padding: 80px 0;
+  background: linear-gradient(135deg, rgba(28, 28, 28, 0.95), rgba(10, 10, 10, 0.95));
+  position: relative;
+}
+
+.timeline-section .section-title {
+  text-align: center;
+  color: var(--primary-color);
+  font-size: 2.5rem;
+  margin-bottom: 50px;
+}
+
+.timeline {
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Timeline central line */
+.timeline::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 2px;
+  height: 100%;
+  background: var(--primary-color);
+  transform: translateX(-50%);
+}
+
+.timeline-item {
+  position: relative;
+  margin-bottom: 60px;
+  width: 100%;
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 0.6s ease;
+}
+
+.timeline-item.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Timeline dots */
+.timeline-dot {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  width: 20px;
+  height: 20px;
+  background: var(--primary-color);
+  border-radius: 50%;
+  transform: translateX(-50%);
+  box-shadow: 0 0 10px var(--primary-color);
+  z-index: 2;
+}
+
+/* Content boxes */
+.timeline-content {
+  position: relative;
+  width: calc(50% - 40px);
+  padding: 20px;
+  background: rgba(28, 28, 28, 0.9);
+  border: 1px solid var(--primary-color);
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease;
+}
+
+/* Alternate content positioning */
+.timeline-item:nth-child(odd) .timeline-content {
+  margin-left: auto;
+}
+
+.timeline-item:nth-child(even) .timeline-content {
+  margin-right: auto;
+}
+
+/* Content styling */
+.timeline-content h3 {
+  color: var(--primary-color);
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+}
+
+.timeline-content p {
+  color: var(--text-color);
+  margin-bottom: 0;
+  line-height: 1.6;
+}
+
+.timeline-content ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.timeline-content ul li {
+  color: var(--text-color);
+  margin: 10px 0;
+  padding-left: 20px;
+  position: relative;
+}
+
+.timeline-content ul li::before {
+  content: '•';
+  color: var(--primary-color);
+  position: absolute;
+  left: 0;
+}
+
+/* Hover effects */
+.timeline-content:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(212, 175, 55, 0.2);
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .timeline::before {
+      left: 30px;
+  }
+
+  .timeline-dot {
+      left: 30px;
+  }
+
+  .timeline-content {
+      width: calc(100% - 80px);
+      margin-left: 60px !important;
+  }
+
+  .timeline-item:nth-child(odd) .timeline-content,
+  .timeline-item:nth-child(even) .timeline-content {
+      margin-right: 0;
+  }
+}
+.timeline-item {
+  position: relative;
+  margin-bottom: 60px;
+  width: 100%;
+  opacity: 0; /* Start hidden */
+  transform: translateY(50px);
+  transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+  visibility: hidden; /* Start hidden */
+}
+
+.timeline-item.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+  visibility: visible;
 }

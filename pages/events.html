@@ -9,194 +9,59 @@
     <link rel="icon" href="../assets/img/favicon.ico" type="image/x-icon">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link href='https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/5.11.0/main.min.css' rel='stylesheet' />
     <script src="https://kit.fontawesome.com/your-fontawesome-kit.js" crossorigin="anonymous"></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/5.11.0/main.min.js'></script>
 </head>
 <body>
     <header>
-        <div class="container">
-            <a href="../index.html" class="logo" aria-label="Innovate Students Home">
-                <img src="../assets/img/logo.png" alt="Innovate Students Logo" width="200" height="60">
-            </a>
-            <nav aria-label="Main Navigation">
-                <ul id="main-menu">
-                    <li><a href="home.html#home">Home</a></li>
-                    <li><a href="features.html#features">Features</a></li>
-                    <li><a href="projects.html#projects">Projects</a></li>
-                    <li><a href="blog.html#blog">Blog</a></li>
-                    <li><a href="#" class="active">Events</a></li>
-                    <li><a href="../index.html#contact" class="cta-button">Get Started</a></li>
-                </ul>
-            </nav>
-            <button id="menu-toggle" aria-label="Toggle Menu">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
-        </div>
+        <!-- Header content here -->
     </header>
     <main>
-        <section class="page-hero">
+        <section class="events-calendar">
             <div class="container">
-                <h1>Upcoming Events</h1>
-                <p>Join us for exciting workshops, seminars, and conferences designed to inspire and empower young innovators.</p>
-            </div>
-        </section>
-        <section id="events-list" aria-labelledby="events-heading">
-            <div class="container">
-                <h2 id="events-heading" class="visually-hidden">List of Events</h2>
-                <div class="events-grid">
-                    <div class="event-item">
-                        <div class="event-date">
-                            <span class="day">15</span>
-                            <span class="month">May</span>
-                        </div>
-                        <div class="event-details">
-                            <h3>Global Innovation Summit</h3>
-                            <p>Join students from around the world for a day of inspiring talks and workshops.</p>
-                            <p><strong>Location:</strong> Virtual Event</p>
-                            <p><strong>Time:</strong> 9:00 AM - 5:00 PM EST</p>
-                            <a href="#" class="register-button">Register Now</a>
-                        </div>
-                    </div>
-                    <div class="event-item">
-                        <div class="event-date">
-                            <span class="day">20</span>
-                            <span class="month">June</span>
-                        </div>
-                        <div class="event-details">
-                            <h3>Tech for Good Conference</h3>
-                            <p>Explore how technology can drive social change and improve lives.</p>
-                            <p><strong>Location:</strong> Online</p>
-                            <p><strong>Time:</strong> 10:00 AM - 4:00 PM EST</p>
-                            <a href="#" class="register-button">Register Now</a>
-                        </div>
-                    </div>
-                    <!-- Additional event items can be added here -->
+                <h2>Upcoming Events</h2>
+                <div class="calendar-container">
+                    <div id="calendar" class="calendar"></div>
+                </div>
+                <div class="events-list">
+                    <h3>Event List</h3>
+                    <ul id="events">
+                        <!-- Events will be dynamically listed here -->
+                    </ul>
+                    <button class="view-all">View All Events</button>
                 </div>
             </div>
         </section>
-
-        <section id="event-proposals">
-            <div class="container">
-                <h2>Propose an Event</h2>
-                <p>Have an idea for an innovative event? We'd love to hear from you!</p>
-                <!-- Custom Event Proposal Form -->
-                <form action="https://docs.google.com/forms/d/e/1FAIpQLSekpaYGh8O6BtquzI_lU_fbmYArCJK1avi7scPqCsq2s6t8zA/formResponse" method="POST" target="_self">
-                    <!-- Name Field -->
-                    <label for="name">Name:</label><br>
-                    <input type="text" name="entry.1492731138" id="name" required><br><br>
-
-                    <!-- Email Field -->
-                    <label for="email">Email:</label><br>
-                    <input type="email" name="entry.1590434249" id="email" required><br><br>
-
-                    <!-- Phone Number Field -->
-                    <label for="phone">Phone No.:</label><br>
-                    <input type="tel" name="entry.1108671453" id="phone"><br><br>
-
-                    <!-- Proposed Title Field -->
-                    <label for="title">What is the proposed title of your event?</label><br>
-                    <input type="text" name="entry.1967499355" id="title" required><br><br>
-
-                    <!-- Brief Description Field -->
-                    <label for="description">Please provide a brief description of the event. What is the main theme or focus?</label><br>
-                    <textarea name="entry.1558016437" id="description" required></textarea><br><br>
-
-                    <!-- Target Audience Field -->
-                    <label for="audience">Who is the event aimed at? (e.g., students, professionals, specific age group, specific field of interest)</label><br>
-                    <input type="text" name="entry.2031442493" id="audience"><br><br>
-
-                    <!-- Primary Goals Field -->
-                    <label for="goals">What are the primary goals of the event? (e.g., skill-building, innovation challenge, collaboration)</label><br>
-                    <input type="text" name="entry.2082033032" id="goals"><br><br>
-
-                    <!-- Event Type Field -->
-                    <label for="type">What type of event is it? (e.g., workshop, webinar, competition, hackathon, networking session)</label><br>
-                    <input type="text" name="entry.2051438651" id="type"><br><br>
-
-                    <!-- Key Activities Field -->
-                    <label for="activities">What are the key activities or sessions planned during the event?</label><br>
-                    <textarea name="entry.424059891" id="activities"></textarea><br><br>
-
-                    <!-- Budget Field -->
-                    <label for="budget">Do you have a proposed budget for the event? Please provide details if possible.</label><br>
-                    <textarea name="entry.49994225" id="budget"></textarea><br><br>
-
-                    <!-- Partners or Collaborators Field -->
-                    <label for="partners">Will there be any partners or collaborators involved in organizing this event?</label><br>
-                    <textarea name="entry.1268543857" id="partners"></textarea><br><br>
-
-                    <!-- Point of Contact Field -->
-                    <label for="contact">Who will be the main point of contact for this event proposal? Please provide your name and contact details.</label><br>
-                    <textarea name="entry.1890159821" id="contact"></textarea><br><br>
-
-                    <!-- Additional Information Field -->
-                    <label for="additional">Is there anything else you'd like to share about your proposed event?</label><br>
-                    <textarea name="entry.1624941911" id="additional"></textarea><br><br>
-
-                    <!-- Submit Button -->
-                    <button type="submit">Submit</button>
-                </form>
-            </div>
-        </section>
-
-        <section id="host-an-event">
-            <div class="container">
-                <h2>Host an Event</h2>
-                <p>Are you interested in hosting an event with us? Fill out the form below to get started!</p>
-                <!-- Host an Event Form -->
-                <form action="https://docs.google.com/forms/d/e/1FAIpQLSf_p-g0alShfdBV8g07lsrBVjfJYN1cIhPgf54t8weLeYl74A/formResponse" method="POST" target="_self">
-                    <!-- Name Field -->
-                    <label for="name">Name:</label><br>
-                    <input type="text" name="entry.840137572" id="name" required><br><br>
-            
-                    <!-- Email Field -->
-                    <label for="email">Email:</label><br>
-                    <input type="email" name="entry.537706682" id="email" required><br><br>
-            
-                    <!-- Phone No. Field -->
-                    <label for="phone">Phone No.:</label><br>
-                    <input type="text" name="entry.1050259456" id="phone" required><br><br>
-            
-                    <!-- Event Title Field -->
-                    <label for="eventTitle">What is the title of your event?</label><br>
-                    <input type="text" name="entry.1030708257" id="eventTitle" required><br><br>
-            
-                    <!-- Event Description Field -->
-                    <label for="eventDescription">Briefly describe the event and its main focus:</label><br>
-                    <textarea name="entry.1496258993" id="eventDescription" required></textarea><br><br>
-            
-                    <!-- Audience Field -->
-                    <label for="audience">Who do you envision attending? (e.g., students, professionals, specific demographics)</label><br>
-                    <textarea name="entry.1676963113" id="audience" required></textarea><br><br>
-            
-                    <!-- Goals Field -->
-                    <label for="goals">What do you hope to achieve with this event? (e.g., knowledge sharing, networking, skill-building)</label><br>
-                    <textarea name="entry.1699933960" id="goals" required></textarea><br><br>
-            
-                    <!-- Event Type Field -->
-                    <label for="eventType">What type of event are you planning? (e.g., workshop, seminar, competition, panel discussion)</label><br>
-                    <input type="text" name="entry.293721759" id="eventType" required><br><br>
-            
-                    <!-- Event Format Field -->
-                    <label for="eventFormat">Will the event be in-person, virtual, or hybrid? If in-person, where will it be held?</label><br>
-                    <textarea name="entry.720874317" id="eventFormat" required></textarea><br><br>
-            
-                    <!-- Collaboration Field -->
-                    <label for="collaboration">Will you be collaborating with any organizations or individuals for this event?</label><br>
-                    <textarea name="entry.919369028" id="collaboration" required></textarea><br><br>
-            
-                    <!-- Impact Field -->
-                    <label for="impact">What impact do you hope the event will have on participants and the community?</label><br>
-                    <textarea name="entry.1974709541" id="impact" required></textarea><br><br>
-            
-                    <!-- Submit Button -->
-                    <button type="submit">Submit</button>
-                </form>
-            </div>
-        </section>
-
     </main>
+    <footer>
+        <!-- Footer content here -->
+    </footer>
+    <script>
+
+    document.getElementById('prevMonth').addEventListener('click', function() {
+        if (currentMonth === 0) {
+            currentMonth = 11;
+            currentYear--;
+        } else {
+            currentMonth--;
+        }
+        drawCalendar(currentMonth, currentYear);
+    });
+
+    document.getElementById('nextMonth').addEventListener('click', function() {
+        if (currentMonth === 11) {
+            currentMonth = 0;
+            currentYear++;
+        } else {
+            currentMonth++;
+        }
+        drawCalendar(currentMonth, currentYear);
+    });
+
+    drawCalendar(currentMonth, currentYear);
+    </script>
+    
     <footer>
         <div class="container">
             <div class="footer-content">
@@ -208,9 +73,11 @@
                     <ul>
                         <li><a href="../index.html#home">Home</a></li>
                         <li><a href="../index.html#features">Features</a></li>
-                        <li><a href="../index.html#projects">Projects</a></li>
-                        <li><a href="../index.html#blog">Blog</a></li>
-                        <li><a href="#">Events</a></li>
+                        <li><a href="../Pages/projects.html">Projects</a></li>
+                        <li><a href="../Pages/blog.html">Blog</a></li>
+                        <li><a href="../Pages/events.html">Events</a></li>
+                        <li><a href="../Pages/competitions.html" class="active">Competitions</a></li>
+                        <li><a href="pages/cohort.html">Cohort</a></li>
                     </ul>
                 </nav>
 
@@ -222,5 +89,38 @@
     </footer>
     <script src="../assets/js/script.js"></script>
     <script src="../assets/js/events.js"></script>
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        var calendarEl = document.getElementById('calendar');
+        var calendar = new FullCalendar.Calendar(calendarEl, {
+            initialView: 'dayGridMonth',
+            events: [
+                // Event data here
+            ]
+        });
+        calendar.render();
+    });
+    </script>
+    <div class="search-bar">
+        <input type="text" id="eventSearch" placeholder="Search events..." onkeyup="searchEvents()">
+    </div>
+
+    <script>
+    function searchEvents() {
+        var input, filter, allEvents, title, i;
+        input = document.getElementById("eventSearch");
+        filter = input.value.toUpperCase();
+        allEvents = calendar.getEvents();
+
+        allEvents.forEach(function(event) {
+            title = event.title.toUpperCase();
+            if (title.indexOf(filter) > -1) {
+                event.setProp('backgroundColor', '#ff9f89'); // Highlight matching events
+            } else {
+                event.setProp('backgroundColor', ''); // Reset
+            }
+        });
+    }
+    </script>
 </body>
 </html>

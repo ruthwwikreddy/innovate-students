@@ -105,4 +105,86 @@ document.addEventListener('DOMContentLoaded', () => {
     // Add blur effect to header
     header.style.backdropFilter = 'blur(10px)'; // Apply blur effect
     header.style.transition = 'border-radius 0.3s'; // Smooth transition for border-radius
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+            const target = document.querySelector(this.getAttribute('href'));
+            const headerOffset = document.querySelector('.futuristic-header').offsetHeight;
+            const elementPosition = target.offsetTop;
+            const offsetPosition = elementPosition - headerOffset;
+
+            window.scrollTo({
+                top: offsetPosition,
+                behavior: "smooth"
+            });
+        });
+    });
+
+    const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('animate');
+            } else {
+                entry.target.classList.remove('animate');
+            }
+        });
+    }, { threshold: 0.5 });
+
+    document.querySelectorAll('.feature-item, .event-item').forEach(item => {
+        observer.observe(item);
+    });
+
+    window.addEventListener('scroll', function() {
+        const parallaxElement = document.querySelector('.hero');
+        const speed = 0.5;
+        parallaxElement.style.transform = `translateY(${window.scrollY * speed}px)`;
+    });
+});
+
+document.addEventListener('DOMContentLoaded', function() {
+    // Get all timeline items
+    const timelineItems = document.querySelectorAll('.timeline-item');
+    
+    // Create the Intersection Observer
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            // Add 'is-visible' class when timeline item enters viewport
+            if (entry.isIntersecting) {
+                entry.target.classList.add('is-visible');
+                // Once animation is done, stop observing the element
+                observer.unobserve(entry.target);
+            }
+        });
+    }, {
+        // Element becomes visible when 20% of it enters the viewport
+        threshold: 0.2,
+        // Start animation slightly before element enters viewport
+        rootMargin: '0px 0px -100px 0px'
+    });
+
+    // Start observing each timeline item
+    timelineItems.forEach(item => {
+        observer.observe(item);
+    });
+
+    // Fallback for browsers that don't support Intersection Observer
+    function showItemsOnScroll() {
+        timelineItems.forEach(item => {
+            const itemTop = item.getBoundingClientRect().top;
+            const windowHeight = window.innerHeight;
+            
+            if (itemTop < windowHeight * 0.8) {
+                item.classList.add('is-visible');
+            }
+        });
+    }
+
+    // Check if Intersection Observer is supported
+    if (!('IntersectionObserver' in window)) {
+        // If not supported, use scroll event
+        window.addEventListener('scroll', showItemsOnScroll);
+        // Initial check for items in view
+        showItemsOnScroll();
+    }
 });
